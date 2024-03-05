@@ -1,0 +1,43 @@
+services:
+  backend:
+    container_name: 'backend'
+    build: 
+      context: backend
+      dockerfile: Dockerfile
+      image: 'backend'
+    ports:
+      - "4000:3000"
+    depends_on:
+      - database
+    restart: on-failure
+    env_file: .env
+    networks:
+      - backend
+
+  frontend:
+    container_name: 'frontend'
+    build: 
+      context: frontend
+      dockerfile: Dockerfile
+    image: "frontend"
+    ports:
+      - "8081:80"
+    restart: on-failure
+    networks:
+    - frontend
+
+  database:
+    image: "postgres"
+    env_file: .env
+    volumes:
+      - postgres_data:/data/postgres
+    restart: always
+    networks:
+      - backend
+
+networks:
+  backend:
+  frontend:
+
+volumes:
+  postgres_data:

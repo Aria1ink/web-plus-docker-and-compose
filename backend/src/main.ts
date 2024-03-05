@@ -7,8 +7,8 @@ async function bootstrap() {
   app.useGlobalPipes(new ValidationPipe({ transform: true }));
   app.enableCors({
     origin: [
-      'https://api.arialink.nomoredomainswork.ru',
-      'https://arialink.nomoredomainswork.ru',
+      'https://api.arialink-k.nomoredomainswork.ru',
+      'https://arialink-k.nomoredomainswork.ru',
     ],
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
     allowedHeaders: [
