@@ -4,7 +4,7 @@ services:
     build: 
       context: backend
       dockerfile: Dockerfile
-      image: 'backend'
+    image: 'backend'
     ports:
       - "4000:3000"
     depends_on:
