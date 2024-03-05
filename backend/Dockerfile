@@ -1,11 +1,11 @@
-FROM node:16-alpine as builder
+FROM node:alpine as builder
 WORKDIR /app
 COPY package*.json ./
 RUN npm ci --no-audit --no-fund
 COPY . ./
 RUN npm run build
 
-FROM node:16-alpine as backend
+FROM node:alpine as backend
 WORKDIR /app
 COPY package*.json ./
 RUN npm ci --omit=dev --no-audit --no-fund \
