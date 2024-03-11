@@ -4,6 +4,6 @@
 
 IP адрес: 158.160.35.217
 
-Frontend: https://arialink.nomoredomainswork.ru/
+Frontend: https://arialink-k.nomoredomainswork.ru/
 
-Backend: https://api.arialink.nomoredomainswork.ru/
+Backend: https://api.arialink-k.nomoredomainswork.ru/
