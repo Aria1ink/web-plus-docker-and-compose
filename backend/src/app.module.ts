@@ -24,7 +24,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       database: process.env.POSTGRES_DB,
       synchronize: true,
       entities: ['dist/*/entities/*.entity.js'],
-      //schema: process.env.POSTGRES_DB,
+      schema: 'public',
     }),
   ],
   controllers: [AppController],
